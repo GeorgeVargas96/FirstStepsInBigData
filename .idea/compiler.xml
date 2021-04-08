@@ -12,6 +12,7 @@
     <bytecodeTargetLevel target="8">
       <module name="ProiectIBM" target="8" />
       <module name="TestMaven" target="8" />
+      <module name="untitled" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
