@@ -1,15 +1,17 @@
 
 import org.apache.spark.sql.SparkSession;
-import org.apache.spark.*;
+
 public class Main {
     public static void main(String []args)
     {
-        SparkSession app= SparkSession.builder()
+        System.setProperty("hadoop.home.dir", System.getProperty("user.home"));
+        SparkSession spark=SparkSession.builder()
                                         .appName("BigData")
-                                            .config("spark.master","local").getOrCreate();
+                                            .config("spark.master","local[*]").getOrCreate();
 
         System.out.println("Hello");
-        app.stop();
+        System.out.println(System.getProperty("user.home"));
+        spark.stop();
 
 }
 
