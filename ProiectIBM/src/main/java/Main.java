@@ -5,6 +5,9 @@ import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
+import org.spark_project.jetty.io.Connection;
+
+import java.util.Properties;
 
 public class Main {
 
@@ -28,11 +31,18 @@ public class Main {
                                      .load("ProiectIBM/data.csv");
 
        data.printSchema();
+        String url="jdbc:mysql://127.0.0.1:3306/GeorgeDB?user=root;password=123456";
+        Properties prop= new Properties();
+        prop.setProperty("user","root");
+        prop.setProperty("password", "123456");
+
+
+       data.write()
+               .jdbc(url,"tabel1",prop);
+
+
 
        data.show(50);
-
-        System.out.println("Hello");
-        System.out.println(System.getProperty("user.home"));
         spark.stop();
 
 }
