@@ -128,7 +128,6 @@
     <orderEntry type="library" name="Maven: org.apache.spark:spark-tags_2.12:2.4.7" level="project" />
     <orderEntry type="library" name="Maven: org.apache.orc:orc-core:nohive:1.5.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.orc:orc-shims:1.5.5" level="project" />
-    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:2.5.0" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:2.6" level="project" />
     <orderEntry type="library" name="Maven: io.airlift:aircompressor:0.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.orc:orc-mapreduce:nohive:1.5.5" level="project" />
@@ -194,5 +193,7 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.thrift:libthrift:0.9.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.thrift:libfb303:0.9.3" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.apache.derby:derby:10.12.1.1" level="project" />
+    <orderEntry type="library" name="Maven: mysql:mysql-connector-java:8.0.23" level="project" />
+    <orderEntry type="library" name="Maven: com.google.protobuf:protobuf-java:3.11.4" level="project" />
   </component>
 </module>

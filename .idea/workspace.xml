@@ -4,8 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Dataset incomplet.">
+    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Fisiere">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_02.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_23.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_4_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_2_5_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_dbcp_commons_dbcp_1_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/ProiectIBM.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/ProiectIBM.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/ProiectIBM-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/ProiectIBM-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/maven-archiver/pom.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +203,21 @@
       <option name="project" value="LOCAL" />
       <updated>1618295620217</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Dataset cu schema.">
+      <created>1618297308172</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1618297308172</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fisiere">
+      <created>1618297333477</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1618297333477</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -218,6 +245,8 @@
     <MESSAGE value="Commit" />
     <MESSAGE value="Fisier csv 50 de record-uri." />
     <MESSAGE value="Dataset incomplet." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dataset incomplet." />
+    <MESSAGE value="Dataset cu schema." />
+    <MESSAGE value="Fisiere" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fisiere" />
   </component>
 </project>
