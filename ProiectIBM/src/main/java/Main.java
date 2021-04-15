@@ -5,7 +5,7 @@ import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
-import org.spark_project.jetty.io.Connection;
+
 
 import java.util.Properties;
 
@@ -37,8 +37,8 @@ public class Main {
         prop.setProperty("password", "123456");
 
 
-       data.write()
-               .jdbc(url,"tabel1",prop);
+       data.write().mode("append")
+               .jdbc(url,"tabel2",prop);
 
 
 
