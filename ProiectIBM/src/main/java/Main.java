@@ -40,7 +40,7 @@ public class Main {
        data.write().mode("append")
                .jdbc(url,"tabel2",prop);
 
-
+    System.out.println("Merge branch");
 
        data.show(50);
         spark.stop();
