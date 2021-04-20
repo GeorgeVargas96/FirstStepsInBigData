@@ -1,13 +1,16 @@
 
+import org.apache.spark.sql.AnalysisException;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
-
+import static org.apache.spark.sql.functions.col;
 
 import java.util.Properties;
+
+
 
 public class Main {
 
@@ -39,10 +42,17 @@ public class Main {
 
        data.write().mode("append")
                .jdbc(url,"tabel2",prop);
+        try {
+            data.createGlobalTempView("tabel");
+        } catch (AnalysisException e) {
+            e.printStackTrace();
+        }
 
-    System.out.println("Merge branch1");
-
+        data.groupBy(col("Gender") ).count().show();
+        spark.sql("select * from global_temp.tabel").show();
+        spark.sql("SELECT AVG('Elementary school cases') FROM global_temp.tabel").show();
        data.show(50);
+       data.select("School unit name").show(50);
         spark.stop();
 
 }
