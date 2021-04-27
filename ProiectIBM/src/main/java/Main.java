@@ -1,9 +1,6 @@
 
 import org.apache.calcite.util.Util;
-import org.apache.spark.sql.AnalysisException;
-import org.apache.spark.sql.Dataset;
-import org.apache.spark.sql.Row;
-import org.apache.spark.sql.SparkSession;
+import org.apache.spark.sql.*;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
@@ -23,7 +20,7 @@ public class Main {
                                         .appName("BigData")
                                             .config("spark.master","local[*]").getOrCreate();
         StructType schema = DataTypes.createStructType(new StructField[] {
-                DataTypes.createStructField("School unit name",  DataTypes.StringType, true),
+                DataTypes.createStructField("School unit name",  DataTypes.StringType, false),
                 DataTypes.createStructField("Elementary school cases", DataTypes.IntegerType, true),
                 DataTypes.createStructField("Middle school cases", DataTypes.IntegerType, true),
                 DataTypes.createStructField("High school cases", DataTypes.IntegerType, true),
@@ -36,33 +33,31 @@ public class Main {
                                      .load("ProiectIBM/data.csv");
 
        data.printSchema();
-        String url="jdbc:mysql://127.0.0.1:3306/GeorgeDB?user=root;password=123456";
+        String url="jdbc:mysql://127.0.0.1:3306/GeorgeDB?";
         Properties prop= new Properties();
         prop.setProperty("user","root");
         prop.setProperty("password", "123456");
 
 
-      /* data.write().mode("append")
-               .jdbc(url,"tabel2",prop);*/
-        try {
-            data.createGlobalTempView("tabel");
-        } catch (AnalysisException e) {
-            e.printStackTrace();
-        }
+      data.write().mode(SaveMode.Overwrite)
+               .jdbc(url,"tabel2",prop);
 
-        data.groupBy(col("Gender") ).count().show();
-        spark.sql("SELECT AVG(`Elementary school cases`) FROM global_temp.tabel").show();
-      //  spark.sql("select `School unit name`, Gender from global_temp.tabel group by gender")
-              //  .agg(first("`School unit name`")).show();
-        data.agg(avg("Elementary school cases")).show();
-        data.groupBy("Gender").agg(sum("Elementary school cases")).show();
+            data.show();
+       Dataset<Row> results=data.groupBy(col("School unit name"),col("Gender")).agg(sum("Elementary school cases")
+       ,sum("Middle school cases"),sum("High school cases"));
+       Dataset<Row> elementarySc=data.groupBy(col("School unit name"),col("Gender"))
+               .agg(sum("Elementary school cases"));
+        Dataset<Row> middleSc=data.groupBy(col("School unit name"),col("Gender"))
+                .agg(sum("Middle school cases"));
+        Dataset<Row> highSc=data.groupBy(col("School unit name"),col("Gender"))
+                .agg(sum("High school cases"));
+        results.filter(col("School unit name").equalTo(lit("Scoala"))).show();
+//        elementarySc.join(middleSc,elementarySc.col("School unit name").equalTo(middleSc.col("School unit name"))
+//                .and(elementarySc.col("Gender")).equalTo(middleSc.col("Gender"))).show();
+            elementarySc.join(middleSc,"Gender").show(1000);
 
-
-
-
-       data.show(50);
-       data.select(col("School unit name"),col("Gender")).show(50);
         spark.stop();
+
 
 }
 
