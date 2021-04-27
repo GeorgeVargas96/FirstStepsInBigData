@@ -4,6 +4,9 @@ import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
+import scala.collection.JavaConverters;
+
+import static java.util.Arrays.asList;
 
 import static org.apache.spark.sql.functions.*;
 
@@ -42,10 +45,9 @@ public class Procesare {
         Dataset<Row> df1=tempDF(elementaryCases);
         Dataset<Row> df2=tempDF(middleCases);
         Dataset<Row> df3=tempDF(highCases);
-        df1.show();
-        df2.show();
-        df3.show();
-        return df1;
+        Dataset<Row> results=df1.join(df2, JavaConverters.asScalaBuffer(asList("School unit name","Gender")));
+
+        return results.join(df3,JavaConverters.asScalaBuffer(asList("School unit name","Gender")));
     }
     public Dataset<Row> dfFinal2()
     {
