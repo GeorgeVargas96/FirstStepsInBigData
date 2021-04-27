@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="avg groupby">
+    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Initializare SparkSession">
+      <change afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Salvare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/data.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" afterDir="false" />
     </list>
@@ -278,7 +279,21 @@
       <option name="project" value="LOCAL" />
       <updated>1619069278464</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Chestii">
+      <created>1619504344084</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1619504344084</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Initializare SparkSession">
+      <created>1619507292763</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1619507292763</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,10 +325,11 @@
     <MESSAGE value="Fisiere" />
     <MESSAGE value="Dependenta MySQL 8.0.23" />
     <MESSAGE value="Salvare valori in MySQL" />
-    <MESSAGE value="Chestii" />
     <MESSAGE value="Branch nou" />
     <MESSAGE value="Incercare transformari" />
     <MESSAGE value="avg groupby" />
-    <option name="LAST_COMMIT_MESSAGE" value="avg groupby" />
+    <MESSAGE value="Chestii" />
+    <MESSAGE value="Initializare SparkSession" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initializare SparkSession" />
   </component>
 </project>
