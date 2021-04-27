@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Initializare SparkSession">
-      <change afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Salvare.java" afterDir="false" />
+    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="salvare">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -293,7 +292,28 @@
       <option name="project" value="LOCAL" />
       <updated>1619507292763</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Main">
+      <created>1619510950813</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1619510950813</updated>
+    </task>
+    <task id="LOCAL-00026" summary="procesare neterminata">
+      <created>1619510968803</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1619510968803</updated>
+    </task>
+    <task id="LOCAL-00027" summary="salvare">
+      <created>1619510980640</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1619510980640</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -330,6 +350,9 @@
     <MESSAGE value="avg groupby" />
     <MESSAGE value="Chestii" />
     <MESSAGE value="Initializare SparkSession" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initializare SparkSession" />
+    <MESSAGE value="Main" />
+    <MESSAGE value="procesare neterminata" />
+    <MESSAGE value="salvare" />
+    <option name="LAST_COMMIT_MESSAGE" value="salvare" />
   </component>
 </project>

@@ -9,7 +9,7 @@ public class Main {
         Procesare p=new Procesare(spark);
         p.afisare();
         p.dfFinal2().show();
-        p.dfFinal().show();
+        p.dfFinal().show(50);
         Salvare.salvare(p.dfFinal2());
 
 
