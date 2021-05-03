@@ -6,11 +6,14 @@ public class Main {
     {
 
         SparkSession spark=CreareSs.start();
-        Procesare p=new Procesare(spark);
-        p.afisare();
-        p.dfFinal2().show();
-        p.dfFinal().show(50);
-        Salvare.salvare(p.dfFinal2());
+       Procesare p=new Procesare(spark);
+
+       // p.dfFinal().show(50);
+        Salvare s=new Salvare();
+      // s.salvare(p.dfFinal());
+        Citire c=new Citire();
+      // c.citire(spark).show(100);
+       p.dfFinal(c.citire(spark)).show(100);
 
 
         spark.stop();
