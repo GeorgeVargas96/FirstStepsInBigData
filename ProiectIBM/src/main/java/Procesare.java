@@ -2,6 +2,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
+import org.apache.spark.sql.types.DecimalType;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
 import scala.collection.JavaConverters;
@@ -31,20 +32,21 @@ public class Procesare {
         this.s = s;
         data = this.s.read().format("csv")
                 .option("header", "true").schema(schema)
-                .load("ProiectIBM/data2.csv");
+                .load("ProiectIBM/data.csv");
     }
 
 
 
     public Dataset<Row> tempDF(String numeCol) {
         return data.groupBy(col("School unit name"), col("Gender"))
-                .agg(avg(numeCol).as(numeCol));
+                .agg(avg(numeCol).as("Old"))
+                .withColumn(numeCol,callUDF("twoDecimals",col("Old")));
     }
 
     public Dataset<Row> dfFinal() {
-        Dataset<Row> df1 = tempDF(elementaryCases);
-        Dataset<Row> df2 = tempDF(middleCases);
-        Dataset<Row> df3 = tempDF(highCases);
+        Dataset<Row> df1 = tempDF(elementaryCases).drop("Old");
+        Dataset<Row> df2 = tempDF(middleCases).drop("Old");
+        Dataset<Row> df3 = tempDF(highCases).drop("Old");
         return df1.join(df2, JavaConverters.asScalaBuffer(asList("School unit name", "Gender")),"full")
                 .join(df3, JavaConverters.asScalaBuffer(asList("School unit name", "Gender")),"full");
 
@@ -53,10 +55,11 @@ public class Procesare {
 
     public Dataset<Row> dfFinal (Dataset<Row> dfSql)
     {
-        return dfFinal().union(dfSql).groupBy(col("School unit name"),col("Gender"))
-                .agg(avg("Elementary school cases").as("Elementary school cases")
-                , avg("Middle school cases").as("Middle school cases")
-                        , avg("High school cases").as("High school cases"));
+        return dfSql.union(dfFinal()).groupBy(col("School unit name"),col("Gender"))
+                .agg(avg(elementaryCases).as(elementaryCases)
+                , avg(middleCases).as(middleCases)
+                        , avg(highCases).as(highCases));
+
     }
 
     public Dataset<Row> dfFinal2() {

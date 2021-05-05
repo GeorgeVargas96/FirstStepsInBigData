@@ -10,11 +10,11 @@ public class Main {
 
        // p.dfFinal().show(50);
         Salvare s=new Salvare();
-      // s.salvare(p.dfFinal());
+       // s.salvare(p.dfFinal());
         Citire c=new Citire();
+        p.dfFinal().show();
       // c.citire(spark).show(100);
-       p.dfFinal(c.citire(spark)).show(100);
-
+       p.dfFinal(c.citire(spark)).show();
 
         spark.stop();
 
