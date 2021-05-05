@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Chestii">
+    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Load">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/data2.csv" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/data2.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/CreareSs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/CreareSs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/ProiectIBM-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/ProiectIBM-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -338,7 +334,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620033681928</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Load">
+      <created>1620206758689</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1620206758689</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,6 +382,7 @@
     <MESSAGE value="Procesare" />
     <MESSAGE value="Main" />
     <MESSAGE value="Chestii" />
-    <option name="LAST_COMMIT_MESSAGE" value="Chestii" />
+    <MESSAGE value="Load" />
+    <option name="LAST_COMMIT_MESSAGE" value="Load" />
   </component>
 </project>

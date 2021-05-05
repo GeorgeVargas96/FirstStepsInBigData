@@ -14,7 +14,7 @@ public class Main {
         Citire c=new Citire();
         p.dfFinal().show();
       // c.citire(spark).show(100);
-       p.dfFinal(c.citire(spark)).show();
+       p.dfFinal(c.citire(spark)).show(100);
 
         spark.stop();
 

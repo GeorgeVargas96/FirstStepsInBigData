@@ -32,7 +32,7 @@ public class Procesare {
         this.s = s;
         data = this.s.read().format("csv")
                 .option("header", "true").schema(schema)
-                .load("ProiectIBM/data.csv");
+                .load("ProiectIBM/data2.csv");
     }
 
 
@@ -42,7 +42,6 @@ public class Procesare {
                 .agg(avg(numeCol).as("Old"))
                 .withColumn(numeCol,callUDF("twoDecimals",col("Old")));
     }
-
     public Dataset<Row> dfFinal() {
         Dataset<Row> df1 = tempDF(elementaryCases).drop("Old");
         Dataset<Row> df2 = tempDF(middleCases).drop("Old");
@@ -55,10 +54,10 @@ public class Procesare {
 
     public Dataset<Row> dfFinal (Dataset<Row> dfSql)
     {
-        return dfSql.union(dfFinal()).groupBy(col("School unit name"),col("Gender"))
-                .agg(avg(elementaryCases).as(elementaryCases)
-                , avg(middleCases).as(middleCases)
-                        , avg(highCases).as(highCases));
+        return (dfSql.union(dfFinal())).groupBy(col("School unit name"),col("Gender"))
+            .agg((avg(elementaryCases).cast(new DecimalType(10,2))).as(elementaryCases)
+                    , (avg(middleCases).cast(new DecimalType(10,2))).as(middleCases)
+                    , (avg(highCases).cast(new DecimalType(10,2))).as(middleCases));
 
     }
 
