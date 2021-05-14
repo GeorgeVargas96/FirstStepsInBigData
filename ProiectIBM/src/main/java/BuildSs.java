@@ -9,7 +9,7 @@ import org.apache.spark.sql.types.DecimalType;
 import java.math.BigDecimal;
 
 
-public class CreareSs {
+public class BuildSs {
 
     public static SparkSession start()
     {
@@ -44,3 +44,4 @@ public class CreareSs {
     }
 
 }
+

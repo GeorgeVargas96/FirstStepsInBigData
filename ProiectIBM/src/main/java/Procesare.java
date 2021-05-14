@@ -58,7 +58,7 @@ public class Procesare {
     public Dataset<Row> dfFinal (Dataset<Row> dfSql)
     {
 
-       Dataset<Row> dfCsv=dfFinal();
+        Dataset<Row> dfCsv=dfFinal();
 
         return dfSql.join(dfCsv,JavaConverters.asScalaBuffer(asList("School unit name", "Gender")),"full")
                 .withColumn("elementaryCases",callUDF("newAvg",dfSql.col(elementaryCases),dfCsv.col(elementaryCases)))
@@ -68,17 +68,15 @@ public class Procesare {
                 .withColumnRenamed("elementaryCases",elementaryCases)
                 .withColumnRenamed("middleCases",middleCases)
                 .withColumnRenamed("highCases",highCases);
-
-
-
-
-
-
-
-
     }
 
-
+    public Dataset<Row> procesare()
+    {
+        ToolDB db=new ToolDB();
+        Dataset<Row> dfSql= db.read(s);
+        if(dfSql.isEmpty())return dfFinal();
+        else return dfFinal(dfSql);
+    }
 
 
 

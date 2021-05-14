@@ -20,8 +20,12 @@ public class ToolDB {
     }
     public Dataset<Row> read(SparkSession spark)
     {
-        return spark.read().jdbc(url, "Covid19", prop);
 
+        try {
+            return spark.read().jdbc(url, "Covid19", prop);
+        } catch (Exception e) {
+            return spark.emptyDataFrame();
+        }
 
 
     }
