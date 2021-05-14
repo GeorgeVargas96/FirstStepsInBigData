@@ -1,3 +1,5 @@
+
+import java.sql.SQLSyntaxErrorException;
 import java.util.Properties;
 import org.apache.spark.sql.*;
 import org.apache.spark.sql.Dataset;
@@ -7,11 +9,13 @@ public class Citire {
     Properties prop= new Properties();
 
     { prop.setProperty("user","root");
-        prop.setProperty("password", "123456");}
+        prop.setProperty("password", "123456");
+    }
 
     public Dataset<Row> citire(SparkSession spark)
     {
-        return spark.read().jdbc(url,"Covid19",prop);
+        return spark.read().jdbc(url, "Covid19", prop);
+
 
 
     }

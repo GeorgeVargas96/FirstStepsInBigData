@@ -2,11 +2,10 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
-import org.apache.spark.sql.types.DecimalType;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
 import scala.collection.JavaConverters;
-import org.apache.spark.sql.*;
+
 
 import static java.util.Arrays.asList;
 
@@ -33,6 +32,7 @@ public class Procesare {
         data = this.s.read().format("csv")
                 .option("header", "true").schema(schema)
                 .load("ProiectIBM/data2.csv");
+
     }
 
 
@@ -42,7 +42,9 @@ public class Procesare {
                 .agg(avg(numeCol).as("Old"))
                 .withColumn(numeCol,callUDF("twoDecimals",col("Old")));
     }
+
     public Dataset<Row> dfFinal() {
+
         Dataset<Row> df1 = tempDF(elementaryCases).drop("Old");
         Dataset<Row> df2 = tempDF(middleCases).drop("Old");
         Dataset<Row> df3 = tempDF(highCases).drop("Old");
@@ -52,22 +54,31 @@ public class Procesare {
 
     }
 
+
     public Dataset<Row> dfFinal (Dataset<Row> dfSql)
     {
-        return (dfSql.union(dfFinal())).groupBy(col("School unit name"),col("Gender"))
-            .agg((avg(elementaryCases).cast(new DecimalType(10,2))).as(elementaryCases)
-                    , (avg(middleCases).cast(new DecimalType(10,2))).as(middleCases)
-                    , (avg(highCases).cast(new DecimalType(10,2))).as(middleCases));
+
+       Dataset<Row> dfCsv=dfFinal();
+
+        return dfSql.join(dfCsv,JavaConverters.asScalaBuffer(asList("School unit name", "Gender")),"full")
+                .withColumn("elementaryCases",callUDF("newAvg",dfSql.col(elementaryCases),dfCsv.col(elementaryCases)))
+                .withColumn("middleCases",callUDF("newAvg",dfSql.col(middleCases),dfCsv.col(middleCases)))
+                .withColumn("highCases",callUDF("newAvg",dfSql.col(highCases),dfCsv.col(highCases)))
+                .drop(JavaConverters.asScalaBuffer(asList(elementaryCases,middleCases,highCases)))
+                .withColumnRenamed("elementaryCases",elementaryCases)
+                .withColumnRenamed("middleCases",middleCases)
+                .withColumnRenamed("highCases",highCases);
+
+
+
+
+
+
+
 
     }
 
-    public Dataset<Row> dfFinal2() {
 
-        return data.groupBy(col("School unit name"), col("Gender")).agg(sum("Elementary school cases")
-                , sum("Middle school cases"), sum("High school cases"));
-
-
-    }
 
 
 

@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Load">
+    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Problema rezolvata.">
+      <change afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/ToolDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Citire.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Citire.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/CreareSs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/CreareSs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Salvare.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -341,7 +345,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620206758689</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Problema rezolvata.">
+      <created>1620210560231</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1620210560231</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -358,7 +369,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Test" />
     <MESSAGE value="Commit3" />
     <MESSAGE value="Depen" />
     <MESSAGE value="Dependenta maven spark" />
@@ -383,6 +393,17 @@
     <MESSAGE value="Main" />
     <MESSAGE value="Chestii" />
     <MESSAGE value="Load" />
-    <option name="LAST_COMMIT_MESSAGE" value="Load" />
+    <MESSAGE value="Problema rezolvata." />
+    <option name="LAST_COMMIT_MESSAGE" value="Problema rezolvata." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

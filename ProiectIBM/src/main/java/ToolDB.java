@@ -1,21 +1,29 @@
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SaveMode;
+import org.apache.spark.sql.SparkSession;
 
 
 import java.util.Properties;
 
-public class Salvare {
+public class ToolDB {
     String url="jdbc:mysql://127.0.0.1:3306/GeorgeDB?";
     Properties prop= new Properties();
     {prop.setProperty("user","root");
         prop.setProperty("password", "123456");}
-    public  void salvare(Dataset<Row> d)
+    public  void write(Dataset<Row> d)
     {
 
 
-       d.write().mode(SaveMode.Overwrite)
-               .jdbc(url,"Covid19",prop);
+        d.write().mode(SaveMode.Overwrite)
+                .jdbc(url,"Covid19",prop);
+    }
+    public Dataset<Row> read(SparkSession spark)
+    {
+        return spark.read().jdbc(url, "Covid19", prop);
+
+
+
     }
 
 }
