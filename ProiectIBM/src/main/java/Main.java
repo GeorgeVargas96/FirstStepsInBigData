@@ -4,9 +4,10 @@ public class Main {
 
     public static void main(String []args)
     {
-        BuildSs s=new BuildSs();
-        SparkSession spark=s.start();
-        Procesare p=new Procesare(spark);
+        System.setProperty("hadoop.home.dir", System.getProperty("user.home"));
+
+
+        Procesare p=new Procesare();
 
 
         ToolDB db=new ToolDB();
@@ -15,9 +16,9 @@ public class Main {
 
         p.procesare().show(100);
 
-        //db.write(p.dfFinal());
+        db.write(p.procesare());
 
-        spark.stop();
+        p.getSpark().stop();
 
 
     }
