@@ -1,20 +1,18 @@
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
-import org.apache.spark.sql.SparkSession;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
 import scala.collection.JavaConverters;
-
+import java.io.Serializable;
 
 import static java.util.Arrays.asList;
 
 import static org.apache.spark.sql.functions.*;
 
-public class Procesare {
-    private final SparkSession s;
-    private final Dataset<Row> data;
+public class Procesare extends BuildSs implements Serializable{
 
+    private final Dataset<Row> data;
     private final static String elementaryCases = "Elementary school cases";
     private final static String middleCases = "Middle school cases";
     private final static String highCases = "High school cases";
@@ -27,9 +25,9 @@ public class Procesare {
             DataTypes.createStructField("Reporting date", DataTypes.DateType, true)
     });
 
-    public Procesare(SparkSession s) {
-        this.s = s;
-        data = this.s.read().format("csv")
+    public Procesare() {
+        super();
+        data = spark.read().format("csv")
                 .option("header", "true").schema(schema)
                 .load("ProiectIBM/data2.csv");
 
@@ -73,7 +71,7 @@ public class Procesare {
     public Dataset<Row> procesare()
     {
         ToolDB db=new ToolDB();
-        Dataset<Row> dfSql= db.read(s);
+        Dataset<Row> dfSql= db.read(spark);
         if(dfSql.isEmpty())return dfFinal();
         else return dfFinal(dfSql);
     }
