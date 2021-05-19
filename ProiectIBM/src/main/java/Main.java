@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String []args)
     {
-
-        SparkSession spark=BuildSs.start();
+        BuildSs s=new BuildSs();
+        SparkSession spark=s.start();
         Procesare p=new Procesare(spark);
 
 
@@ -13,7 +13,7 @@ public class Main {
 
 
 
-        p.procesare().show(true);
+        p.procesare().show(100);
 
         //db.write(p.dfFinal());
 

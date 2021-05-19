@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 
 public class BuildSs {
 
-    public static SparkSession start()
+    public  SparkSession start()
     {
         System.setProperty("hadoop.home.dir", System.getProperty("user.home"));
 

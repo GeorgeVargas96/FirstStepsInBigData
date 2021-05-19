@@ -4,15 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Join cu udf si altele.">
-      <change afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/BuildSs.java" afterDir="false" />
+    <list default="true" id="1b5118fb-7874-4cc7-bb6e-9c10979b7241" name="Default Changelist" comment="Curatenie.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Citire.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/CreareSs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/BuildSs.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/BuildSs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/Procesare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/src/main/java/ToolDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/src/main/java/ToolDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/ProiectIBM-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/ProiectIBM-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProiectIBM/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/ProiectIBM/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620987414355</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Curatenie.">
+      <created>1620991475005</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1620991475005</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +382,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Depen" />
     <MESSAGE value="Dependenta maven spark" />
     <MESSAGE value="Dependente" />
     <MESSAGE value="SparkSession cu eroare&#10;java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries." />
@@ -401,7 +406,8 @@
     <MESSAGE value="Load" />
     <MESSAGE value="Problema rezolvata." />
     <MESSAGE value="Join cu udf si altele." />
-    <option name="LAST_COMMIT_MESSAGE" value="Join cu udf si altele." />
+    <MESSAGE value="Curatenie." />
+    <option name="LAST_COMMIT_MESSAGE" value="Curatenie." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
