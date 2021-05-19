@@ -11,11 +11,13 @@ import java.math.BigDecimal;
 
 public class BuildSs {
 
-    public  SparkSession start()
-    {
-        System.setProperty("hadoop.home.dir", System.getProperty("user.home"));
 
-        SparkSession spark=SparkSession.builder()
+   protected SparkSession spark;
+    public  BuildSs()
+    {
+
+
+        spark=SparkSession.builder()
                 .appName("BigData")
                 .config("spark.master","local[*]").getOrCreate();
 
@@ -39,8 +41,12 @@ public class BuildSs {
         };
         spark.udf().register("twoDecimals",twoDecimals,new DecimalType(38,2));
         spark.udf().register("newAvg",newAvg,new DecimalType(38,2));
-        return spark;
 
+
+    }
+    public SparkSession getSpark()
+    {
+        return spark;
     }
 
 }
