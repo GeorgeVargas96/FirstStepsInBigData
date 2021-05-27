@@ -1,6 +1,6 @@
-BuildSs$2.class
-Main.class
-ToolDB.class
-BuildSs$1.class
-Procesare.class
-BuildSs.class
+app\Main.class
+app\BuildSs$1.class
+app\Procesare.class
+app\BuildSs$2.class
+app\BuildSs.class
+app\ToolDB.class
